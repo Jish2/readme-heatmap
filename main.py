@@ -12,8 +12,8 @@ def main():
 
     for w in range(53):
         for d in range(7):
-            x = w * (block_width + gap)
-            y = d * (block_height + gap)
+            x = w * (block_width + gap) + 1
+            y = d * (block_height + gap) + 1
             body += get_heat_point(x, y, randint(0, 4), True)
             dark_body += get_heat_point(x, y, randint(0, 4), False)
 

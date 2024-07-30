@@ -27,7 +27,11 @@ def get_date_map_from_timestamp_map(timestamp_map: dict[str, int]) -> dict[int, 
 
 def get_heat(heat: int, quartiles: List[int]):
     # eg [0, 5, 10, 15, 20]
-    for i, quartile in enumerate(quartiles):
-        if heat < quartile:
+    if heat == 0:
+        return 0
+
+    for i in range(1, len(quartiles)):
+        if heat < quartiles[i]:
             return i
+
     return len(quartiles) - 1

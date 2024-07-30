@@ -7,7 +7,7 @@ block_height = 10
 block_width = 10
 
 
-def generate_images(date_map: dict[int, int], quartiles: list[int]):
+def generate_images(date_map: dict[int, int], quartiles: list[int], outDir: str = "./"):
     if not date_map or not quartiles:
         raise ValueError("missing arguments")
 
@@ -25,7 +25,7 @@ def generate_images(date_map: dict[int, int], quartiles: list[int]):
     h = 7 * (block_height + gap)
     w = 53 * (block_width + gap)
 
-    with open("result_light.svg", "w") as f:
+    with open(f"{outDir}result_light.svg", "w") as f:
         f.write(get_svg_base(h, w, body))
-    with open("result_dark.svg", "w") as f:
+    with open(f"{outDir}result_dark.svg", "w") as f:
         f.write(get_svg_base(h, w, dark_body))

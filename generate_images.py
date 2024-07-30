@@ -1,5 +1,5 @@
-from components import get_heat_point, get_svg_base
-from utils import get_heat
+from .components import get_heat_point, get_svg_base
+from .utils import get_heat
 
 gap = 3
 block_height = 10

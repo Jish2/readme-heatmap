@@ -17,7 +17,7 @@ def generate_images(date_map: dict[int, int], quartiles: list[int], outDir: str 
         for d in range(7):
             x = w * (block_width + gap) + 1
             y = d * (block_height + gap) + 1
-            heat = get_heat(date_map.get(w * 7 + d, 0), quartiles)
+            heat = get_heat(date_map.get(w * 7 - d, 0), quartiles)
             body += get_heat_point(x, y, heat, True)
             dark_body += get_heat_point(x, y, heat, False)
 

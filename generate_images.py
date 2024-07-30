@@ -1,5 +1,4 @@
 from components import get_heat_point, get_svg_base
-from random import randint
 from utils import get_heat
 
 gap = 3

@@ -15,3 +15,7 @@ dynamically updated heatmap in an svg
   <img alt="heatmap" src="./result_light.svg">
 </picture>
 ```
+
+### example repo
+
+my [leetcode](https://github.com/jish2/leetcode) repo using a github action to update the heatmap daily
